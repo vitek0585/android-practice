@@ -56,3 +56,9 @@ dependencies {
 
     implementation project(":library")
 }
+
+tasks.withType(Test) {
+    testLogging {
+        events "started", "passed", "skipped", "failed"
+    }
+}
